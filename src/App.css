@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
+.MyNavBar {
+  background-color: #059475;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.LeafLogo {
+  height: 3rem;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ReceiptLogo{
+  border-radius: 50%;
+  border: 1px solid grey;
+  height: 2rem;
+  width: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ReceiptContainer{
+  width: 60vw !important;
+  border: 1px solid grey;
+  border-radius: 0.75rem;
 }
 
-.App-link {
-  color: #61dafb;
+.UploadFile{
+  padding-bottom: 2.25rem !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AnalyseReceiptBtn{
+  background-color: #059475 !important;
 }
