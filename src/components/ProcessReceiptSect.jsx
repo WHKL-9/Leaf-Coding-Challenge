@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "../App.css";
 import ReceiptInput from "./ReceiputInput";
 
-const ProcessReceipt = () => {
+const ProcessReceiptSect = () => {
   return (
     <Container className="ReceiptContainer my-3">
       <Row className="d-flex justify-content-center">
@@ -28,4 +28,4 @@ const ProcessReceipt = () => {
   );
 };
 
-export default ProcessReceipt;
+export default ProcessReceiptSect;

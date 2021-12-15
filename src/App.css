@@ -1,3 +1,7 @@
+.App{
+  overflow-x : hidden !important;
+}
+
 .MyNavBar {
   background-color: #059475;
 }
@@ -27,3 +31,4 @@
 .AnalyseReceiptBtn{
   background-color: #059475 !important;
 }
+
