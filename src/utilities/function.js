@@ -1,11 +1,12 @@
 const endpoint = "http://localhost:3001/";
+const axios = require("axios");
 
 export const acceptFile = (event, setFileInput, showOutput) => {
   event.preventDefault();
   const file = event.target.files[0];
   if (file && file.type.substring(0, 4) == "text") {
     setFileInput(file);
-    console.log(file)
+    console.log(file);
     showOutput(false);
   } else {
     setFileInput(null);
@@ -14,25 +15,20 @@ export const acceptFile = (event, setFileInput, showOutput) => {
 };
 
 export const sendFile = async (file, setLoading) => {
-  const fileInput = JSON.stringify(file)
-  // const fileInput_2 = JSON.parse(file)
-  // console.log(fileInput)
-  // console.log(fileInput_2)
+  let formData = new FormData();
+  formData.append("textFile", file);
+  const config = { headers: { "Content-Type": "text/plain" } };
+  // debugger
   try {
-    setLoading(true)
-    const response = await fetch (endpoint, {
-      method: "POST",
-      headers: {"Content-Type": "text/plain"},
-      body: JSON.stringify(file)
-    })
-    if(response.ok){
-      console.log(file)
-      setLoading(false)
+    setLoading(true);
+    const response = await axios.post(endpoint, formData, config);
+    if (response.ok) {
+      setLoading(false);
     }
   } catch (error) {
-    console.log(error)
-    setLoading(false)
+    console.log(error);
+    setLoading(false);
   }
-}
+};
 
-// export const showProcessedOutput 
+// export const showProcessedOutput
