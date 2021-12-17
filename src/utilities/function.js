@@ -18,7 +18,6 @@ export const sendFile = async (file, setLoading) => {
   let formData = new FormData();
   formData.append("textFile", file);
   const config = { headers: { "Content-Type": "text/plain" } };
-  // debugger
   try {
     setLoading(true);
     const response = await axios.post(endpoint, formData, config);
