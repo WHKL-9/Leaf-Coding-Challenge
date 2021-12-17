@@ -1,4 +1,4 @@
-const endpoint = "http://localhost:3001/";
+export const endpoint = "http://localhost:3001/";
 const axios = require("axios");
 
 export const acceptFile = (event, setFileInput, showOutput) => {
@@ -31,4 +31,3 @@ export const sendFile = async (file, setLoading) => {
   }
 };
 
-// export const showProcessedOutput

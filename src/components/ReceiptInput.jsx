@@ -47,7 +47,7 @@ const ReceiptInput = () => {
               >
                 Analyse Receipt
               </Button>
-              {output && <ReceiptOutput responses={responses} />}
+              {output && <ReceiptOutput/>}
             </div>
           </section>
         ) : (

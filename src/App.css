@@ -30,6 +30,7 @@
 
 .AnalyseReceiptBtn{
   background-color: #059475 !important;
+  box-shadow: none;
 }
 
 .blockOutput{
