@@ -16,10 +16,13 @@ export const acceptFile = (event, setFileInput, showOutput) => {
 
 export const sendFile = async (file, setLoading) => {
   let formData = new FormData();
+  // provides a way to construct a set of key/value pairs 
+  // representing form fields and their values
   formData.append("textFile", file);
   const config = { headers: { "Content-Type": "text/plain" } };
   try {
     setLoading(true);
+    // axios.put(url[, data[, config]])
     const response = await axios.post(endpoint, formData, config);
     if (response.ok) {
       setLoading(false);

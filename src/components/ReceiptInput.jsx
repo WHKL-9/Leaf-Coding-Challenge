@@ -1,8 +1,7 @@
 import { Form, Button } from "react-bootstrap";
 import "../App.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import ReceiptOutput from "./ReceiptOutput";
-import responses from "../assets/backend_response.json";
 import { acceptFile, sendFile} from "../utilities/function";
 
 const ReceiptInput = () => {
@@ -27,7 +26,9 @@ const ReceiptInput = () => {
         <Form.Control
           type="file"
           className="UploadFile"
+          // but we still can't fully prevent user from uploading non txt file 
           accept=".txt"
+          name="textFile"
           onChange={(event) => {
             acceptFile(event, setFileInput, showOutput)
           }}
